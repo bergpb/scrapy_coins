@@ -40,7 +40,7 @@ for data_coins in coins.find_all("div", class_="home_conv_carrocel_item"):
     data.append({
                  "name": name,
                  "image": images[i],
-                 "value": re.search("\d+[,.]\d+[,]?\d+", value)[0],
+                 "value": value.split("R$ ")[1],
 		         "date": dt.now()
                 })
     i += 1
